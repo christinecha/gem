@@ -1,0 +1,30 @@
+<section class="hero">
+  <h1>
+    Experience the Movement
+  </h1>
+  <p>
+    Introducing Gem.
+    <br />
+    A new app that unlocks connection, control
+    and knowledge to the world of digital assets.
+  </p>
+</section>
+
+<section class="press-mentions">
+  <h2>
+    Press mentions carousel
+  </h2>
+</section>
+
+{.repeated section items}
+  {.equal? @index 1}<section class="features">{.end}
+  <article>
+    {title}
+  </article>
+  {.equal? @index 4}</section>{.end}
+  <!--{@index}-->
+{.end}
+
+<div>home</div>
+
+<squarespace:script src="home.js" />

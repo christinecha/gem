@@ -1,0 +1,23 @@
+{
+  "name": "gem",
+  "version": "0.0.0",
+  "description": "Gem.co website.",
+  "scripts": {
+    "build": "webpack --mode production && squarespace assemble",
+    "deploy": "squarespace deploy -f https://carlo-espiritu-nc5a.squarespace.com/template.git",
+    "server": "squarespace runserver https://carlo-espiritu-nc5a.squarespace.com",
+    "watch": "webpack --mode development --watch --colors --progress & squarespace assemble --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/christinecha/gem.git"
+  },
+  "author": "Christine Cha <hello@christinecha.com>",
+  "devDependencies": {
+    "@squarespace/toolbelt": "^0.8.8",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
+  }
+}
