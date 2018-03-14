@@ -1,0 +1,5 @@
+<header>header</header>
+
+<div id="threejs-container"></div>
+
+<squarespace:script src="splash.js" />

@@ -4,7 +4,7 @@
   "description": "Gem.co website.",
   "scripts": {
     "build": "webpack --mode production && squarespace assemble",
-    "deploy": "squarespace deploy -f https://carlo-espiritu-nc5a.squarespace.com/template.git",
+    "deploy": "npm run build && squarespace deploy -f https://carlo-espiritu-nc5a.squarespace.com/template.git",
     "server": "squarespace runserver https://carlo-espiritu-nc5a.squarespace.com",
     "watch": "webpack --mode development --watch --colors --progress & squarespace assemble --watch"
   },
@@ -19,5 +19,9 @@
     "babel-loader": "^7.1.4",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.11"
+  },
+  "dependencies": {
+    "three": "^0.90.0",
+    "three-collada-loader": "0.0.1"
   }
 }
