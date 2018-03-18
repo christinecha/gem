@@ -1,5 +1,20 @@
-<header>header</header>
+<div class="full-screen-wrapper">
+  <header><div class="logo"></div></header>
 
-<div id="threejs-container"></div>
+  <div id="threejs-wrapper"></div>
+
+  <div class="text-wrapper">
+    <h1>
+      A New Way
+      <br />
+      To Look At Crypto
+    </h1>
+    <h2>Arriving May 2018.</h2>
+    <div class="input-wrapper">
+      <input type="text" placeholder="Be the first to know" />
+      <button>Sign Up</button>
+    </div>
+  </div>
+</div>
 
 <squarespace:script src="splash.js" />

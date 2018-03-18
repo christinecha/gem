@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "description": "Gem.co website.",
   "scripts": {
-    "build": "webpack --mode production && squarespace assemble",
-    "deploy": "npm run build && squarespace deploy -f https://carlo-espiritu-nc5a.squarespace.com/template.git",
+    "build": "squarespace assemble && webpack --mode production",
+    "builddeploy": "npm run build && npm run deploy",
+    "deploy": "squarespace deploy -f https://carlo-espiritu-nc5a.squarespace.com/template.git",
     "server": "squarespace runserver https://carlo-espiritu-nc5a.squarespace.com",
     "watch": "webpack --mode development --watch --colors --progress & squarespace assemble --watch"
   },

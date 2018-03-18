@@ -1,9 +1,82 @@
 .page-splash {
-  header {
+  .full-screen-wrapper {
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
   }
 
-  #threejs-container {
-    position: fixed;
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #threejs-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .text-wrapper {
+    position: relative;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: 'Mirador', serif;
+    font-weight: 300;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .input-wrapper {
+    position: relative;
+    width: 80%;
+    max-width: 350px;
+
+    margin: auto;
+    margin-top: 35px;
+  }
+
+  input {
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    bottom: 0;
+    margin: auto;
+    border: none;
+    background-color: #0BBCD4;
+    color: white;
+    border-radius: 2px;
+    padding: 0 20px;
+    height: calc(~'100% - 8px');
+    cursor: pointer;
   }
 }
