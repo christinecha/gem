@@ -1,6 +1,7 @@
 const DESKTOP_COIN_TYPES = [
   'ethereum',
-  'bitcoin',
+  // 'bitcoin',
+  'augur',
   'stellar',
   'litecoin',
   'eos',
@@ -8,7 +9,8 @@ const DESKTOP_COIN_TYPES = [
 
 const DESKTOP_COIN_COORDS = [
   [-2,0.8,5.5],
-  [-6,2,-0.5],
+  // [-6,2,-0.5],
+  [-6.5,2,-4],
   [-6,0.2,-8],
   [-4,-4.8,5],
   [-6,-6,-6],

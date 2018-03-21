@@ -1,13 +1,4 @@
 <div class="full-screen-wrapper">
-  <header>
-    <div class="logo"><img src="./assets/logos/gem-logo-final.svg" /></div>
-    <ul>
-      {# <a href=""><li>About</li></a>}
-      <a href="https://jobs.lever.co/gem/6b5b315b-81fc-4802-8e2d-3a39cb0c9510"><li>Jobs</li></a>
-      <a href="https://enterprise.gem.co" target="_blank"><li>Enterprise</li></a>
-    </ul>
-  </header>
-
   <div id="threejs-wrapper"></div>
 
   <div class="mobile-coins">
@@ -20,7 +11,7 @@
 
   <div class="desktop-coins">
     <img class="neo" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03b151ae6cff2929a4158/1521498906105/neo-500px.png?format=150w" />
-    <img class="augur" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a3e2b6a28f49888043b/1521498695057/augur-500px.png?format=150w" />
+    <img class="bitcoin" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a4af950b73eb9bb7bf4/1521498702177/bitcoin-500px.png?format=150w" />
     <img class="nem" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a4a0e2e72e816ec367d/1521498703043/ripple-500px.png?format=150w" />
     <img class="ripple" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a4a352f53a1f3e215ae/1521498704757/ripple-500px.png?format=150w" />
     <img class="monero" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a4af950b73eb9bb7be7/1521498701670/monero-500px.png?format=150w" />

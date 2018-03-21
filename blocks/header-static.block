@@ -1,0 +1,8 @@
+<header>
+  <div class="logo"><img src="./assets/logos/gem-logo-final.svg" /></div>
+  <ul>
+    {# <a href=""><li>About</li></a>}
+    <a href="https://jobs.lever.co/gem/6b5b315b-81fc-4802-8e2d-3a39cb0c9510"><li>Jobs</li></a>
+    <a href="https://enterprise.gem.co" target="_blank"><li>Enterprise</li></a>
+  </ul>
+</header>
