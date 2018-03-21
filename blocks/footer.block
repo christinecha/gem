@@ -1,0 +1,10 @@
+<footer>
+  <ul>
+    <a target="_blank" href="https://twitter.com/gemhq"><li><img src="../assets/social/twitter.svg" /></li></a>
+    <a target="_blank" href="https://instagram.com/gemhq"><li><img src="../assets/social/insta.svg" /></li></a>
+    <a target="_blank" href="https://www.facebook.com/gemhq"><li><img src="../assets/social/facebook.svg" /></li></a>
+    <a target="_blank" href="https://www.linkedin.com/company/gem-hq/"><li><img src="../assets/social/linkedin.svg" /></li></a>
+  </ul>
+
+  <p>Made in Venice, CA © 2014-2018</p>
+</footer>

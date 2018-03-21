@@ -27,7 +27,6 @@ class ThreeJsWrapper {
     this.camera.position.set( 10, 1, 0 );
     this.camera.lookAt( new THREE.Vector3( 0, 0, 0 ) )
   	this.scene = new THREE.Scene()
-    this.scene.background = new THREE.Color( 0xffffff )
 
     this.lastSpin = null
 
@@ -60,17 +59,18 @@ class ThreeJsWrapper {
       this.container.classList.add('is-loaded')
     })
 
-  	var ambientLight = new THREE.AmbientLight( 0xffffff, 0.8 )
+  	var ambientLight = new THREE.AmbientLight( 0xffffff, 0.6 )
   	this.scene.add( ambientLight )
-  	var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.2 )
-  	directionalLight.position.set( 10, 10, 0 )
+  	var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.3 )
+  	directionalLight.position.set( 20, 10, 0 )
   	this.scene.add( directionalLight )
 
     var directionalLight2 = new THREE.DirectionalLight( 0xffffff, 0.2 )
-    directionalLight2.position.set( 5, 10, 0 )
+    directionalLight2.position.set( 10, 10, 0 )
     this.scene.add( directionalLight2 )
 
-  	this.renderer = new THREE.WebGLRenderer( { antialias: true } )
+  	this.renderer = new THREE.WebGLRenderer( { antialias: true, alpha: true } )
+    this.renderer.setClearColor( 0x000000, 0 )
   	this.renderer.setPixelRatio( window.devicePixelRatio )
   	this.renderer.setSize( window.innerWidth, window.innerHeight )
   	this.container.appendChild( this.renderer.domElement )

@@ -1,1 +1,44 @@
-About
+<section class="intro">
+  <squarespace:block-field id="about-intro" columns="1"/>
+</section>
+
+<section class="team">
+  <h1>Who We Are</h1>
+
+  <section class="department">
+    <h2>Leadership</h2>
+    <squarespace:query collection="team-photos-leadership" limit="50">
+      <ul class="team-members">
+        {.repeated section items}
+          <li class="team-member">
+            <img src="{assetUrl}"/>
+            <div class="info">
+              {body}
+            </div>
+          </li>
+        {.end}
+      </ul>
+    </squarespace:query>
+  </section>
+
+  <section class="department">
+    <h2>Our Team</h2>
+    <squarespace:query collection="team-photos" limit="50">
+      <ul class="team-members">
+        {.repeated section items}
+          <li class="team-member">
+            <img src="{assetUrl}"/>
+            <div class="info">
+              {body}
+            </div>
+          </li>
+        {.end}
+      </ul>
+    </squarespace:query>
+  </section>
+</section>
+
+<section class="values">
+  <h2>Our Core Values</h2>
+  <squarespace:block-field id="about-values" columns="1"/>
+</section>

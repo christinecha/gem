@@ -22,7 +22,7 @@ const MOBILE_COIN_TYPES = [
 
 const MOBILE_COIN_COORDS = [
   // ethereum
-  [-0.5,0.2,0],
+  [-1,0.5,0],
 ]
 
 module.exports = {
