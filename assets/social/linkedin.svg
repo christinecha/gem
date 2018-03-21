@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="gem-website-01-interim" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-gem.co-home-teaser" transform="translate(-155.000000, -954.000000)">
+            <g id="3-footer" transform="translate(50.000000, 954.000000)">
+                <g id="social">
+                    <g id="Linkedin" transform="translate(105.000000, 0.000000)">
+                        <circle id="Oval-1-Copy-5" fill="#BDBDBD" cx="10" cy="10" r="10"></circle>
+                        <path d="M6.10436508,7.41909655 C6.79280952,7.41909655 7.35092063,6.91012652 7.35092063,6.28158859 C7.35092063,5.65249452 6.79280952,5.14285714 6.10436508,5.14285714 C5.41525397,5.14285714 4.85714286,5.65249452 4.85714286,6.28158859 C4.85714286,6.91012652 5.41525397,7.41909655 6.10436508,7.41909655" id="Fill-182" fill="#FFFFFF"></path>
+                        <polygon id="Fill-183" fill="#FFFFFF" points="5.14285714 14.7364867 7.37952381 14.7364867 7.37952381 8.28571429 5.14285714 8.28571429"></polygon>
+                        <path d="M10.5187143,11.1486959 C10.5187143,10.408932 10.8687143,9.6855183 11.7056032,9.6855183 C12.5424921,9.6855183 12.7482698,10.408932 12.7482698,11.131011 L12.7482698,14.6540934 L14.9749365,14.6540934 L14.9749365,10.9869733 C14.9749365,8.43923134 13.4689365,8 12.5424921,8 C11.6168254,8 11.1062698,8.3131011 10.5187143,9.07177341 L10.5187143,8.20332107 L8.28571429,8.20332107 L8.28571429,14.6540934 L10.5187143,14.6540934 L10.5187143,11.1486959 Z" id="Fill-184" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
