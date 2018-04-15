@@ -1,0 +1,28 @@
+<section class="intro">
+  <squarespace:block-field id="careers-intro" columns="1"/>
+  <img />
+</section>
+
+<div class="benefits-wrapper">
+  <section class="benefits">
+    <squarespace:block-field id="careers-benefits" columns="12"/>
+  </section>
+</div>
+
+<section class="job-opportunities">
+  <h1>Current Opportunities</h1>
+
+  <squarespace:query collection="job-opportunities" limit="50">
+    <ul class="jobs">
+      {.repeated section items}
+        <li class="job">
+          <h5>{title}</h5>
+          <p>{body}</p>
+          <a href="{sourceUrl}">APPLY</a>
+        </li>
+      {.end}
+    </ul>
+  </squarespace:query>
+</section>
+
+{@|apply email-signup.block}

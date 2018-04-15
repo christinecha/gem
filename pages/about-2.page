@@ -5,6 +5,10 @@
   <squarespace:block-field id="about-intro" columns="1"/>
 </section>
 
+<article class="mission">
+  <squarespace:block-field id="about-mission" columns="2"/>
+</article>
+
 <section class="team">
   <h1>Who We Are</h1>
 
@@ -51,5 +55,6 @@
 </section>
 
 {@|apply email-signup.block}
+
 
 <squarespace:script src="about.js" />

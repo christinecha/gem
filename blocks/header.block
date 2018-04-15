@@ -1,7 +1,5 @@
 <header>
-  <a class="logo">
-    Gem Logo
-  </a>
+  <a href="/" class="logo">{@|apply logo.block}</a>
 
   <nav>
     <ul>

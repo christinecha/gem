@@ -1,5 +1,6 @@
 body {
   font-family: 'Graphik', sans-serif;
+  color: #424242;
 }
 
 main {
@@ -7,5 +8,93 @@ main {
 
 input {
   margin: 0;
-   -webkit-appearance: unset;
- }
+  -webkit-appearance: unset;
+}
+
+h1 {
+  font-family: 'Mirador', serif;
+  font-weight: 500;
+  font-size: 36px;
+  color: #424242;
+
+  @media (min-width: 1024px) {
+    font-size: 44px;
+  }
+}
+
+h2 {
+  font-family: 'Mirador', serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #424242;
+
+  @media (min-width: 1024px) {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  color: #00BBD5;
+}
+
+h4 {
+  font-family: 'Graphik', sans-serif;
+  font-weight: 100;
+  font-size: 22px;
+
+  @media (min-width: 1024px) {
+    font-size: 26px;
+  }
+}
+
+h5 {
+  font-family: 'Graphik', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+}
+
+p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6em;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.sqs-layout {
+  width: 100%;
+}
+
+.sqs-layout > .sqs-row {
+  margin: 0;
+}
+
+.sqs-row {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  .col {
+    float: none;
+  }
+}
+
+.sqs-block-html {
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+.sqs-block-content {
+  text-align: center;
+}

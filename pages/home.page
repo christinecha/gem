@@ -1,0 +1,69 @@
+<section class="hero">
+  <div class="phone">
+    <img class="phone" src="/assets/home/phone.jpg" />
+  </div>
+
+  <div class="animation">
+    <div class="layers">
+      <div class="scene">
+        {#  <div class="overlay"></div>  }
+        <img class="unicorn" src="/assets/home/unicorn.png" />
+        <img class="shapes-1" src="/assets/home/all-1.png" />
+        <img class="eos" src="/assets/home/eos.png" />
+        <div class="background"></div>
+      </div>
+    </div>
+    <img class="glyph" src="/assets/home/glyph-map.png" />
+  </div>
+  <squarespace:block-field id="home-hero-text" columns="1"/>
+</section>
+
+<section class="press-mentions">
+  <squarespace:query collection="press-mentions" limit="20">
+    <ul class="mentions">
+      {.repeated section items}
+        <li class="mention">
+          <h2>{title}</h2>
+          <p>{body}</p>
+        </li>
+      {.end}
+    </ul>
+  </squarespace:query>
+</section>
+
+<section class="features">
+  <div class="alternating-colors first-image-left">
+    <article class="feature" data-feature-id="1">
+      <squarespace:block-field id="home-feature-block-1" columns="2"/>
+    </article>
+    <article class="feature" data-feature-id="2">
+      <squarespace:block-field id="home-feature-block-2" columns="2"/>
+    </article>
+    <article class="feature" data-feature-id="3">
+      <squarespace:block-field id="home-feature-block-3" columns="2"/>
+    </article>
+    <article class="feature" data-feature-id="4">
+      <squarespace:block-field id="home-feature-block-4" columns="2"/>
+    </article>
+  </div>
+
+  <article class="feature" data-feature-id="5">
+    <squarespace:block-field id="home-feature-block-5" columns="2"/>
+  </article>
+
+  <div class="alternating-colors first-image-right">
+    <article class="feature" data-feature-id="6">
+      <squarespace:block-field id="home-feature-block-6" columns="2"/>
+    </article>
+    <article class="feature" data-feature-id="7">
+      <squarespace:block-field id="home-feature-block-7" columns="2"/>
+    </article>
+    <article class="feature" data-feature-id="8">
+      <squarespace:block-field id="home-feature-block-8" columns="2"/>
+    </article>
+  </div>
+</section>
+
+{@|apply email-signup.block}
+
+<squarespace:script src="home.js" />

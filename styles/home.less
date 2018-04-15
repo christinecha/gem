@@ -1,6 +1,402 @@
 .collection-home {
   .hero {
+    position: relative;
     height: 100vh;
-    background: #eee;
+    max-height: 80vw;
+    min-height: 768px;
+    overflow: hidden;
+
+    .phone {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      width: 25vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: -1;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+
+    @dur: 6000ms;
+
+    .animation {
+      position: absolute;
+      top: calc(~'(150vw - 100vh) / -2');
+      bottom: calc(~'(150vw - 100vh) / -2');
+      right: -25vw;
+      left: -25vw;
+      margin: auto;
+      width: 150vw;
+      height: 150vw;
+      z-index: 1;
+      transition: transform ease-in @dur;
+      transform-origin: center;
+
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
+
+      &.locked-in {
+        transition: none !important;
+
+        .layers,
+        .overlay,
+        .glyph {
+          transition: none !important;
+        }
+      }
+
+      &.zoomed-out {
+        transform: translate3d(-3vw, -1.8vw, 0);
+
+        .layers {
+          transform: scale(0.02);
+        }
+
+        .scene {
+          opacity: 0;
+          filter: blur(10px);
+        }
+
+        .glyph {
+          transform: scale(0.02);
+        }
+
+        .shapes-1,
+        .unicorn {
+          filter: blur(10px);
+        }
+
+        .eos {
+          filter: blur(0);
+        }
+      }
+
+      .layers {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        overflow: hidden;
+        background: white;
+
+        transition: transform ease-in @dur;
+      }
+
+      .scene {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+
+        transition: opacity linear 500ms (@dur - 1000ms),
+                    transform ease-in @dur,
+                    filter linear (@dur / 2) (@dur / 2);
+      }
+
+      .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        background: linear-gradient(#007dcb 10%, #19c0e1 40%, #19c0e1 60%, #bc5bcd 90%);
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        background: white;
+        z-index: 10;
+      }
+
+      .glyph {
+        top: calc(~'(150vw - 100%) / -2');
+        bottom: calc(~'(150vw - 100%) / -2');
+        left: calc(~'(150vw - 100%) / -2');
+        right: calc(~'(150vw - 100%) / -2');
+        height: 150vw;
+        z-index: 20;
+
+        transform: scale(1.6);
+        transition: transform linear @dur;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 100%;
+
+        @keyframes float1 {
+          0% { transform: rotateZ(0deg); }
+          25% { transform: rotateZ(1deg); }
+          50% { transform: rotateZ(3deg); }
+          75% { transform: rotateZ(2deg); }
+          100% { transform: rotateZ(0deg); }
+        }
+
+        @keyframes float2 {
+          0% { transform: rotateZ(0deg); }
+          20% { transform: rotateZ(-1deg); }
+          50% { transform: rotateZ(-3deg); }
+          80% { transform: rotateZ(3deg); }
+          100% { transform: rotateZ(0deg); }
+        }
+
+        &.shapes-1 {
+          height: 80vw;
+          z-index: 1;
+          animation: float2 14000ms linear infinite;
+
+          will-change: filter;
+          transition: filter ease-in @dur /2;
+        }
+
+        &.eos {
+          z-index: 6;
+          height: 26vw;
+          transform: translate3d(160%,80%,0);
+
+          filter: blur(10px);
+          will-change: filter;
+          transition: filter linear @dur / 2;
+        }
+
+        &.unicorn {
+          height: 28vw;
+          z-index: 5;
+          animation: float1 12000ms linear infinite;
+
+          will-change: filter;
+          transition: filter ease-in @dur /2;
+        }
+      }
+    }
+  }
+
+  .press-mentions {
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    background-color: #F5F5F5;
+
+    .mentions {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .mention {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 33%;
+      height: 100%;
+      padding: 0 40px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      min-width: 250px;
+
+      opacity: 0;
+
+      transition: transform 600ms ease-in-out;
+
+      &[data-arrival-index="0"],
+      &[data-arrival-index="1"],
+      &[data-arrival-index="2"],
+      &[data-departure-index="1"] {
+        opacity: 1;
+      }
+
+      &[data-arrival-index="1"] {
+        transform: translate3d(100%,0,0);
+      }
+
+      &[data-arrival-index="2"] {
+        transform: translate3d(200%,0,0);
+        transition: transform 600ms ease-in-out,
+                    opacity 600ms step-end;
+      }
+
+      &[data-departure-index="1"] {
+        transform: translate3d(-100%,0,0);
+      }
+
+      &[data-departure-index="2"] {
+        transform: translate3d(-200%,0,0);
+        transition: transform 600ms ease-in-out,
+                    opacity 600ms step-end;
+      }
+
+      .sqs-block-content {
+        max-width: 400px;
+        margin: auto;
+      }
+
+      h2 {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .features {
+    .sqs-layout {
+      .sqs-col-1 {
+        width: 100%;
+        margin: 0 auto;
+
+        @media (min-width: 768px) {
+          width: 50%;
+        }
+      }
+
+      .sqs-row {
+        box-sizing: border-box;
+        width: 100% !important;
+      }
+    }
+
+    .alternating-colors {
+      &.first-image-left {
+        .feature:nth-child(even) {
+          .col {
+            &:nth-child(1) { order: 2; }
+            &:nth-child(2) { order: 1; }
+
+            @media (min-width: 768px) {
+              order: 1 !important;
+            }
+          }
+        }
+      }
+
+      &.first-image-right {
+        .feature:nth-child(odd) {
+          .col {
+            &:nth-child(1) { order: 2; }
+            &:nth-child(2) { order: 1; }
+
+            @media (min-width: 768px) {
+              order: 1 !important;
+            }
+          }
+        }
+      }
+
+      .feature {
+        padding: 40px 20px;
+        margin: 20px;
+
+        @media (min-width: 768px) {
+          padding: 80px 20px;
+        }
+
+        .sqs-row {
+          max-width: 1100px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        &:nth-child(odd) {
+          background-color: #FBFBFB;
+        }
+
+        .sqs-block-content {
+          padding: 0 20px;
+        }
+      }
+    }
+
+    .feature {
+      &[data-feature-id="5"] {
+        .col {
+          &:nth-child(1) {
+            background-color: #F5F5F5;
+          }
+
+          &:nth-child(2) {
+            background-color: #EAEAEA;
+          }
+        }
+
+        .sqs-block-content {
+          max-width: 350px;
+          width: 100%;
+          margin: auto;
+          padding: 80px 30px;
+        }
+      }
+
+      .sqs-block-image {
+        max-width: 250px;
+        width: 100%;
+        margin: auto;
+
+        @media (min-width: 1024px) {
+          max-width: 320px;
+        }
+      }
+
+      .col {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+      }
+
+      .sqs-block-content {
+        box-sizing: border-box;
+        max-width: 350px;
+        width: 100%;
+        margin: auto;
+
+        margin-top: 40px;
+
+        @media (min-width: 768px) {
+          max-width: 450px;
+          margin-top: auto;
+        }
+      }
+
+      .sqs-block-code .sqs-block-content {
+        margin-top: 0;
+      }
+
+      .shapeshift {
+        width: 150px;
+      }
+    }
   }
 }

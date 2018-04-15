@@ -1,6 +1,8 @@
 const entry = {
   'home': './scripts/home.js',
-  'splash': './scripts/splash.js'
+  'splash': './scripts/splash.js',
+  'about': './scripts/about.js',
+  'site': './scripts/site.js'
 }
 
 module.exports = {
