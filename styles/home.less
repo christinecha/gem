@@ -5,6 +5,14 @@
     max-height: 80vw;
     min-height: 768px;
     overflow: hidden;
+    transition: opacity 600ms ease-in-out;
+
+    display: flex;
+    align-items: center;
+
+    &.is-loading {
+      opacity: 0.01;
+    }
 
     .phone {
       position: absolute;
@@ -18,6 +26,12 @@
       align-items: center;
       justify-content: center;
       z-index: -1;
+      transform: translate3d(8vw,0,0);
+      display: none;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
 
       img {
         position: absolute;
@@ -59,7 +73,7 @@
       }
 
       &.zoomed-out {
-        transform: translate3d(-3vw, -1.8vw, 0);
+        transform: translate3d(13vw, -1.8vw, 0);
 
         .layers {
           transform: scale(0.02);
@@ -196,6 +210,37 @@
         }
       }
     }
+
+    .sqs-layout {
+      padding: 30px;
+      width: 100%;
+      box-sizing: border-box;
+
+      h1 {
+        max-width: 260px;
+        line-height: 1.3em;
+        margin: auto;
+      }
+
+      .sqs-block-content {
+        width: 100%;
+        max-width: 360px;
+        margin: auto;
+      }
+
+      @media (min-width: 768px) {
+        width: 50%;
+
+        h1 {
+          max-width: 320px;
+          margin-left: 0;
+        }
+
+        .sqs-block-content {
+          text-align: left;
+        }
+      }
+    }
   }
 
   .press-mentions {
@@ -288,6 +333,12 @@
       }
     }
 
+    .sqs-block-content {
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+    }
+
     .alternating-colors {
       &.first-image-left {
         .feature:nth-child(even) {
@@ -316,8 +367,7 @@
       }
 
       .feature {
-        padding: 40px 20px;
-        margin: 20px;
+        padding: 60px 20px;
 
         @media (min-width: 768px) {
           padding: 80px 20px;
@@ -335,6 +385,15 @@
 
         .sqs-block-content {
           padding: 0 20px;
+        }
+
+        .sqs-block-code .sqs-block-content {
+          text-align: center !important;
+        }
+
+        video {
+          width: 100%;
+          max-width: 300px;
         }
       }
     }
@@ -356,6 +415,23 @@
           width: 100%;
           margin: auto;
           padding: 80px 30px;
+        }
+      }
+
+      &[data-feature-id="8"] {
+        // padding-right: 0;
+
+        // .sqs-row {
+        //   margin-right: 0;
+        // }
+
+        // .sqs-block-content {
+        //   margin-right: 0;
+        //   padding-right: 0;
+        // }
+
+        .sqs-block-image {
+          max-width: 480px;
         }
       }
 

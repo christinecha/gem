@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero is-loading">
   <div class="phone">
     <img class="phone" src="/assets/home/phone.jpg" />
   </div>
@@ -6,7 +6,6 @@
   <div class="animation">
     <div class="layers">
       <div class="scene">
-        {#  <div class="overlay"></div>  }
         <img class="unicorn" src="/assets/home/unicorn.png" />
         <img class="shapes-1" src="/assets/home/all-1.png" />
         <img class="eos" src="/assets/home/eos.png" />
