@@ -1,34 +1,28 @@
 <section class="hero is-loading">
   <div class="phone">
-    <img class="phone" src="/assets/home/phone.jpg" />
+    <img src="/assets/home/phone.jpg" />
+    <video src="https://s3.amazonaws.com/gem-token-models/Gem_PhoneLoop_01.mp4" autoplay loop />
   </div>
 
-  <div class="animation">
-    <div class="layers">
-      <div class="scene">
-        <img class="unicorn" src="/assets/home/unicorn.png" />
-        <img class="shapes-1" src="/assets/home/all-1.png" />
-        <img class="eos" src="/assets/home/eos.png" />
-        <div class="background"></div>
-      </div>
+  {# @|apply hero-animation.block}
+  <div class="home-hero-text-wrapper">
+    <squarespace:block-field id="home-hero-text" columns="1"/>
+    <div class="signup-wrapper">
+      <div class="signup" data-vl-widget="popupTrigger"></div>
     </div>
-    <img class="glyph" src="/assets/home/glyph-map.png" />
   </div>
-  <squarespace:block-field id="home-hero-text" columns="1"/>
 </section>
 
-<section class="press-mentions">
-  <squarespace:query collection="press-mentions" limit="20">
-    <ul class="mentions">
-      {.repeated section items}
-        <li class="mention">
-          <h2>{title}</h2>
-          <p>{body}</p>
-        </li>
-      {.end}
-    </ul>
-  </squarespace:query>
+<section class="play-video">
+  <button class="play-video-button">Play<br />Video</button>
+
+  <div class="video-iframe">
+    <iframe src="https://www.youtube.com/embed/AEsbrWsn4tU?showinfo=0&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div class="close">✕</div>
+  </div>
 </section>
+
+{# @|apply press-mentions.block}
 
 <section class="features">
   <div class="alternating-colors first-image-left">

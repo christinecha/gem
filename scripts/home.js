@@ -8,59 +8,92 @@ const $glyph = document.getElementsByClassName('glyph')[0]
 const $animation = document.getElementsByClassName('animation')[0]
 const $imgs = document.getElementsByTagName('IMG')[0]
 const $videos = document.getElementsByTagName('VIDEO')
+const $heroVideo = $hero.getElementsByTagName('VIDEO')[0]
+const $playVideoButton = document.getElementsByClassName('play-video-button')[0]
+const $videoIframe = document.getElementsByClassName('video-iframe')[0]
+const $videoIframeClose = $videoIframe.getElementsByClassName('close')[0]
 
-const baseSlideshow = new BaseSlideshow({
-  slideshowRef: $mentions,
-  childSelector: '.mention',
-  numOfClones: 1
-})
+// const baseSlideshow = new BaseSlideshow({
+//   slideshowRef: $mentions,
+//   childSelector: '.mention',
+//   numOfClones: 1
+// })
 
-window.addEventListener('visibilitychange', () => {
-  if (document.visibilityState === 'hidden') {
-    baseSlideshow.stop()
-  }
+// window.addEventListener('visibilitychange', () => {
+//   if (document.visibilityState === 'hidden') {
+//     baseSlideshow.stop()
+//   }
 
-  if (document.visibilityState === 'visible') {
-    baseSlideshow.play()
-  }
-})
+//   if (document.visibilityState === 'visible') {
+//     baseSlideshow.play()
+//   }
+// })
 
-window.addEventListener('resize', () => {
-  if (window.zoomedIn) {
-    $animation.classList.add('locked-in')
-  }
-})
-
-const promises = [].slice.call($imgs).map($img => {
-  return new Promise(resolve => {
-    if ($img.complete) {
-      return resolve()
-    }
-    $img.addEventListener('load', resolve)
-  })
-})
-
-Promise.all(promises)
-.then(() => {
+if ($heroVideo.complete) {
   $hero.classList.remove('is-loading')
+} else {
+  $heroVideo.addEventListener('loadeddata', () => {
+    $hero.classList.remove('is-loading')
+  })
+}
 
-  setTimeout(() => {
-    const handleTransitionEnd = (e) => {
-      if (e.propertyName !== 'transform') return
-      if (e.target !== $animation) return
-      $animation.removeEventListener('transitionend', handleTransitionEnd)
-
-      ;[].slice.call($videos).forEach($vid => {
-        $vid.setAttribute('autoplay', true)
-        $vid.play()
-      })
-    }
-
-    $animation.addEventListener('transitionend', handleTransitionEnd)
-    $animation.classList.add('zoomed-out')
-    window.zoomedIn = true
-  }, 5000)
+$playVideoButton.addEventListener('click', () => {
+  $videoIframe.classList.add('is-active')
+  document.body.classList.add('locked')
 })
+
+$videoIframeClose.addEventListener('click', () => {
+  $videoIframe.classList.remove('is-active')
+  document.body.classList.remove('locked')
+})
+
+// window.addEventListener('resize', () => {
+//   if (window.zoomedIn) {
+//     $animation.classList.add('locked-in')
+//     document.body.classList.remove('locked')
+//   }
+// })
+
+// const promises = [].slice.call($imgs).map($img => {
+//   return new Promise(resolve => {
+//     if ($img.complete) {
+//       return resolve()
+//     }
+//     $img.addEventListener('load', resolve)
+//   })
+// })
+
+// window.addEventListener('DOMContentLoaded', () => {
+//   scrollTo(0,0)
+//   setTimeout(() => {
+//     document.body.classList.add('locked')
+//     scrollTo(0,0)
+//   }, 1000)
+// })
+
+// Promise.all(promises)
+// .then(() => {
+//   $hero.classList.remove('is-loading')
+
+//   setTimeout(() => {
+//     const handleTransitionEnd = (e) => {
+//       if (e.propertyName !== 'transform') return
+//       if (e.target !== $animation) return
+//       $animation.removeEventListener('transitionend', handleTransitionEnd)
+
+//       ;[].slice.call($videos).forEach($vid => {
+//         $vid.setAttribute('autoplay', true)
+//         $vid.play()
+//       })
+
+//       document.body.classList.remove('locked')
+//     }
+
+//     $animation.addEventListener('transitionend', handleTransitionEnd)
+//     $animation.classList.add('zoomed-out')
+//     window.zoomedIn = true
+//   }, 5000)
+// })
 
 // const dur = 5000
 // const first = Date.now()

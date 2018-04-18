@@ -1,0 +1,12 @@
+<section class="press-mentions">
+  <squarespace:query collection="press-mentions" limit="20">
+    <ul class="mentions">
+      {.repeated section items}
+        <li class="mention">
+          <h2>{title}</h2>
+          <p>{body}</p>
+        </li>
+      {.end}
+    </ul>
+  </squarespace:query>
+</section>
