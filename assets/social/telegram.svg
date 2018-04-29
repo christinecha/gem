@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Telegram</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="01-gem.co-home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-50.000000, -7043.000000)">
+        <g id="6-footer" transform="translate(0.000000, 6782.000000)">
+            <g id="social" transform="translate(50.000000, 261.000000)">
+                <g id="Telegram">
+                    <circle id="Oval-1-Copy-58" fill="#BDBDBD" cx="16" cy="16" r="16"></circle>
+                    <g id="Group-76" transform="translate(6.000000, 9.000000)" fill="#FFFFFF">
+                        <path d="M7.4159292,13 C7.07079646,13 7.13274336,12.862069 7.00884956,12.5218391 L6,9.06436782 L12.2654867,5 L13,5.20229885 L12.3893805,6.93103448 L7.4159292,13 L7.4159292,13 Z" id="path2993"></path>
+                        <path d="M12.9564878,13.8108158 C13.6728656,14.1946896 14.1938677,14.0027527 14.3762184,13.1582304 L16.9421536,1.28373458 C17.2026546,0.247275359 16.538377,-0.213373186 15.8480493,0.0937258437 L0.791089487,5.80064948 C-0.237889599,6.21011485 -0.224864547,6.77312974 0.608738763,7.01624981 L4.47717912,8.20625855 L13.4253896,2.66568022 C13.8421913,2.40976436 14.2329429,2.55051808 13.9203416,2.83202553 L6.65236276,9.24271777 L12.9564878,13.8108158 Z" id="path2991"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,7 +1,7 @@
 <section class="hero is-loading">
   <div class="phone">
     <img src="/assets/home/phone.jpg" />
-    <video src="https://s3.amazonaws.com/gem-token-models/Gem_PhoneLoop_01.mp4" autoplay loop />
+    <video src="https://s3.amazonaws.com/gem-token-models/Gem_PhoneLoop_05.mp4" autoplay loop />
   </div>
 
   {# @|apply hero-animation.block}
@@ -9,6 +9,9 @@
     <squarespace:block-field id="home-hero-text" columns="1"/>
     <div class="signup-wrapper">
       <div class="signup" data-vl-widget="popupTrigger"></div>
+      <a  class="telegram" href="https://t.me/GemHQ" target="_blank">
+        <button>Connect on Telegram</button>
+      </a>
     </div>
   </div>
 </section>
@@ -41,7 +44,7 @@
   </div>
 
   <article class="feature" data-feature-id="5">
-    <squarespace:block-field id="home-feature-block-5" columns="2"/>
+    <squarespace:block-field id="home-feature-block-5a" columns="12"/>
   </article>
 
   <div class="alternating-colors first-image-right">

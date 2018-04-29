@@ -1,0 +1,34 @@
+<div class="full-screen-wrapper">
+  <div id="threejs-wrapper"></div>
+
+  <div class="mobile-coins">
+    <img class="bitcoin" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a4af950b73eb9bb7bf4/1521498702177/bitcoin-500px.png?format=150w" />
+    <img class="litecoin" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a4baa4a99177499c781/1521498702259/litecoin-500px.png?format=150w" />
+    <img class="neo" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03b151ae6cff2929a4158/1521498906105/neo-500px.png?format=150w" />
+    <img class="nem" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a4a0e2e72e816ec367d/1521498703043/ripple-500px.png?format=150w" />
+    <img class="ripple" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a4a352f53a1f3e215ae/1521498704757/ripple-500px.png?format=150w" />
+  </div>
+
+  <div class="desktop-coins">
+    <img class="neo" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03b151ae6cff2929a4158/1521498906105/neo-500px.png?format=150w" />
+    <img class="bitcoin" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a4af950b73eb9bb7bf4/1521498702177/bitcoin-500px.png?format=150w" />
+    <img class="nem" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a4a0e2e72e816ec367d/1521498703043/ripple-500px.png?format=150w" />
+    <img class="ripple" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a4a352f53a1f3e215ae/1521498704757/ripple-500px.png?format=150w" />
+    <img class="monero" src="https://static1.squarespace.com/static/5a99a2a925bf0209c14107f2/5ab03a32575d1f5490193a65/5ab03a4af950b73eb9bb7be7/1521498701670/monero-500px.png?format=150w" />
+  </div>
+
+  <div class="text-wrapper">
+    <h1>
+      A New Way
+      <br />
+      to Look at Crypto
+    </h1>
+    <p>Arriving May 2018</p>
+
+    <div class="signup-wrapper">
+      <div class="signup" data-vl-widget="popupTrigger"></div>
+    </div>
+  </div>
+</div>
+
+<squarespace:script src="splash.js" />

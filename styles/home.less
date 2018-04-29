@@ -3,11 +3,30 @@
     overflow: hidden;
   }
 
+  &.is-touch {
+    .features .feature .sqs-block-image {
+      display: block;
+    }
+
+    .features .feature video {
+      display: none;
+    }
+  }
+
+  &.sqs-edit-mode {
+    .features .feature video {
+      display: block !important;
+    }
+
+    .features .feature .sqs-block-image {
+      display: block !important;
+    }
+  }
+
   .hero {
     position: relative;
     height: 100vh;
-    max-height: 80vw;
-    min-height: 768px;
+    min-height: 500px;
     overflow: hidden;
     transition: opacity 600ms ease-in-out;
 
@@ -25,13 +44,22 @@
       bottom: 0;
       right: 0;
       margin: auto;
-      width: 25vw;
+      width: 32vw;
       display: flex;
       align-items: center;
       justify-content: center;
       z-index: -1;
-      transform: translate3d(8vw,0,0);
+      transform: translate3d(25vw,0,0);
       display: none;
+
+      @media (min-width: 768px) {
+
+      }
+
+      @media (min-width: 1024px) {
+        width: 25vw;
+        transform: translate3d(18vw,0,0);
+      }
 
       img {
         position: absolute;
@@ -55,16 +83,6 @@
 
       @media (min-width: 768px) {
         display: block;
-
-        &::after {
-          content: "";
-          width: 5%;
-          background-color: #fff;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          right: 0;
-        }
 
         video {
           display: block;
@@ -165,7 +183,7 @@
         width: 100%;
         height: 100%;
         border-radius: 100%;
-        background: linear-gradient(#007dcb 10%, #19c0e1 40%, #19c0e1 60%, #bc5bcd 90%);
+        background: linear-gradient(#007dcb, #19c0e1, #bc5bcd);
       }
 
       .overlay {
@@ -252,14 +270,26 @@
       box-sizing: border-box;
 
       @media (min-width: 768px) {
-        width: 50%;
+        width: 60%;
       }
 
       .signup-wrapper {
+        position: relative;
+
+        // Optical alignment.
+        left: -3px;
+
         width: 100%;
         max-width: 360px;
         margin: auto;
-        margin-top: 20px;
+
+        text-align: center;
+
+        @media (min-width: 768px) {
+          margin-top: 20px;
+          max-width: 430px;
+          text-align: left;
+        }
 
         .signup {
           height: 35px;
@@ -270,9 +300,36 @@
 
           button {
             background-color: #0BBCD4 !important;
-            border-radius: 24px !important;
-            padding: 5px 20px !important;
           }
+        }
+
+        button, .telegram button {
+          padding: 5px 20px !important;
+          font-size: 13px !important;
+          font-weight: 300 !important;
+          border-radius: 24px !important;
+          line-height: 1.2em !important;
+          height: 35px;
+          box-sizing: border-box;
+          cursor: pointer;
+        }
+
+        .telegram {
+          display: inline-block;
+          margin-top: 10px;
+
+          @media (min-width: 768px) {
+            margin-top: 0;
+            position: absolute;
+            top: 0;
+            left: 180px;
+          }
+        }
+
+        .telegram button {
+          border: 1px solid #0BBCD4;
+          background-color: transparent;
+          color: #0BBCD4;
         }
 
         .vl-embedded-cta-loader {
@@ -283,33 +340,38 @@
 
     .sqs-layout {
       h1 {
-        max-width: 260px;
+        max-width: 320px;
         line-height: 1.3em;
         margin: auto;
       }
 
       .sqs-block-content {
         width: 100%;
-        max-width: 360px;
+        max-width: 280px;
         margin: auto;
+
+        @media (min-width: 560px) {
+          max-width: 500px;
+        }
       }
 
       @media (min-width: 768px) {
         h1 {
-          max-width: 320px;
           margin-left: 0;
         }
 
         .sqs-block-content {
           text-align: left;
+          max-width: 430px;
         }
       }
     }
   }
 
   .play-video {
-    background: linear-gradient(#007dcb 10%, #19c0e1 40%, #19c0e1 60%, #bc5bcd 90%);
+    position: relative;
     text-align: center;
+    overflow: hidden;
 
     button {
       width: 120px;
@@ -335,6 +397,7 @@
       width: 100%;
       height: 100%;
       visibility: hidden;
+      display: none;
       opacity: 0;
       z-index: 99;
       background-color: white;
@@ -504,7 +567,7 @@
       }
 
       .feature {
-        padding: 60px 20px;
+        padding: 40px 20px;
 
         @media (min-width: 768px) {
           padding: 80px 20px;
@@ -537,21 +600,70 @@
 
     .feature {
       &[data-feature-id="5"] {
-        .col {
-          &:nth-child(1) {
-            background-color: #F5F5F5;
-          }
+        .sqs-block-content {
+          width: 100%;
+          margin: auto;
+          padding: 80px 20px;
+          text-align: center;
+          max-width: 600px;
+        }
 
-          &:nth-child(2) {
-            background-color: #EAEAEA;
+        .sqs-block-image {
+          display: block;
+          width: 100%;
+          max-width: none;
+          padding: 0 !important;
+
+          .sqs-block-content {
+            padding: 0;
+            max-width: none;
           }
         }
 
+        .sqs-col-3 {
+          @media (max-width: 767px) {
+            display: none;
+          }
+
+          .sqs-block-image {
+            width: 10vw;
+            max-width: 100px;
+          }
+        }
+
+        .col {
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+        }
+      }
+
+      &[data-feature-id="6"] {
+        padding-bottom: 0;
+
+        @media (min-width: 768px) {
+          .sqs-block-html {
+            padding-bottom: 80px !important;
+          }
+        }
+
+        padding-bottom: 0;
+
+        .col:nth-child(1) {
+          order: 1 !important;
+        }
+
         .sqs-block-content {
-          max-width: 350px;
-          width: 100%;
-          margin: auto;
-          padding: 80px 30px;
+          // width: 100%;
+          // margin: auto;
+          // padding: 80px 0px;
+          // text-align: center;
+          // max-width: 570px;
+        }
+
+        .sqs-block-image {
+          display: block;
+          padding: 0;
         }
       }
 
@@ -576,9 +688,19 @@
         max-width: 250px;
         width: 100%;
         margin: auto;
+        display: none;
 
         @media (min-width: 1024px) {
           max-width: 320px;
+        }
+
+        img {
+          opacity: 0;
+          transition: opacity 300ms ease-in-out;
+
+          &.loaded {
+            opacity: 1;
+          }
         }
       }
 

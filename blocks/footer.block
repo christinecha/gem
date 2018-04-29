@@ -1,5 +1,6 @@
 <footer>
   <ul>
+    <a target="_blank" href="https://t.me/GemHQ"><li><img src="../assets/social/telegram.svg" /></li></a>
     <a target="_blank" href="https://twitter.com/gemhq"><li><img src="../assets/social/twitter.svg" /></li></a>
     <a target="_blank" href="https://instagram.com/gemhq"><li><img src="../assets/social/insta.svg" /></li></a>
     <a target="_blank" href="https://www.facebook.com/gemhq"><li><img src="../assets/social/facebook.svg" /></li></a>

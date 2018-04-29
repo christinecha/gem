@@ -13,6 +13,19 @@ const $playVideoButton = document.getElementsByClassName('play-video-button')[0]
 const $videoIframe = document.getElementsByClassName('video-iframe')[0]
 const $videoIframeClose = $videoIframe.getElementsByClassName('close')[0]
 
+const playVideos = () => {
+  ;[].slice.call($videos).forEach($vid => {
+    $vid.setAttribute('autoplay', true)
+    $vid.play()
+  })
+}
+
+const isTouch = 'ontouchstart' in window
+
+if (isTouch) {
+  document.body.classList.add('is-touch')
+}
+
 // const baseSlideshow = new BaseSlideshow({
 //   slideshowRef: $mentions,
 //   childSelector: '.mention',
@@ -29,13 +42,18 @@ const $videoIframeClose = $videoIframe.getElementsByClassName('close')[0]
 //   }
 // })
 
-if ($heroVideo.complete) {
+
+if ($heroVideo.readyState === 4) {
   $hero.classList.remove('is-loading')
+  $videoIframe.style.display = 'block'
 } else {
   $heroVideo.addEventListener('loadeddata', () => {
     $hero.classList.remove('is-loading')
+    $videoIframe.style.display = 'block'
   })
 }
+
+playVideos()
 
 $playVideoButton.addEventListener('click', () => {
   $videoIframe.classList.add('is-active')
@@ -81,10 +99,7 @@ $videoIframeClose.addEventListener('click', () => {
 //       if (e.target !== $animation) return
 //       $animation.removeEventListener('transitionend', handleTransitionEnd)
 
-//       ;[].slice.call($videos).forEach($vid => {
-//         $vid.setAttribute('autoplay', true)
-//         $vid.play()
-//       })
+
 
 //       document.body.classList.remove('locked')
 //     }
